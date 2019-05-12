@@ -6,13 +6,13 @@ if (!$con) {
 }
 
 mysqli_select_db($con,"ofertanti");
-$sql="SELECT Username, Password, Nume, Prenume, Email, Nr_telefon, Scor FROM ofertanti where Username = ? and Password = ?";
+$sql="SELECT Username, Password, Nume, Prenume, Email, Nr_telefon, Scor, ID_ofertant FROM ofertanti where Username = ? and Password = ?";
 
 $stmt = $con->prepare($sql);
 $stmt->bind_param("ss", $_GET['uname'], $_GET['psw']);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($name, $pass, $nume, $prenume, $email, $nr_telefon, $scor);
+$stmt->bind_result($name, $pass, $nume, $prenume, $email, $nr_telefon, $scor, $id);
 $stmt->fetch();
 $stmt->close();
 
@@ -163,7 +163,11 @@ else {
         <div class=\"card-body\">
             <h5 class=\"card-title\">Current offers</h5>
             <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            <a href=\"currentoffers.php?idOfertant=";
+
+            echo $id;
+
+            echo "\" class=\"btn btn-primary\" >Go somewhere</a>
         </div>
     </div>
     <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:38%; left:60%\">
