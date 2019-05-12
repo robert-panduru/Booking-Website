@@ -39,22 +39,34 @@
 			.login_button {
 				position: absolute;
 				top: 65%;
-				left: 37%;
-				width: 8%;
-			}
-			.sign_up_button {
-				position: absolute;
-				top: 65%;
-				left: 55%;
-				width: 8%
+				left: 45%;
+				width: 10%;
 			}
     	</style>
 	</head>
 	<body background="http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg">
 		<img src="/img/logo.png" style="position:absolute; TOP:20%; LEFT:35%; border:0" >
-
-		<a href="login.html" class="btn btn-primary login_button" role="button" aria-pressed="true">Login</a>
-		<a href="signup.html" class="btn btn-primary sign_up_button" role="button" aria-pressed="true">Sign up</a>
+		
+		<form action="/getuser.php">
+			<div class="login_panel">
+				<div class="form-group">
+		    		<!-- <label class="col-sm-1 col-form-label">Username</label> -->
+		   			<div class="col">
+		     			<input type="text" class="form-control" placeholder="Enter Username" name="uname" required="">
+		    		</div>
+		  		</div>
+				<div class="form-group">
+				    <!-- <label class="col-sm-1 col-form-label">Password</label> -->
+				    <div class="col">
+				    	<input type="password" class="form-control" placeholder="Password" name="psw" required="">
+				    </div>
+				</div>
+				
+				
+			</div>
+			<button type="submit" class="btn btn-primary login_button">Login</button>
+			<!-- <a href="signup.html" class="btn btn-primary sign_up_button" role="button" aria-pressed="true">Sign up</a> -->
+		</form>
 		
 		<!-- <div style="position:absolute; TOP:70%; LEFT:45%; border:0; color:red">
 			<a href="signup.html">Sign up</a> -->

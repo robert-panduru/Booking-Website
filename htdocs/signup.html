@@ -2,7 +2,7 @@
 	<head>
 		<!-- Required meta tags -->
     	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
     	<!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -31,19 +31,21 @@
 			  }
 			}
 			.login_panel {
-				width: 40%;
 				position: absolute;
+				width: 40%;
 				left: 30%;
-				top: 50%;
+				top: 35%;
 			}
-			.login_button {
-				margin-left: 45%;
-				margin-width: 10%;
+			.create_acc {
+				position: absolute;
+				top: 105%;
+				left: 35%;
+				width: 30%;
 			}
     	</style>
 	</head>
 	<body background="http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg">
-		<img src="/img/logo.png" style="position:absolute; TOP:20%; LEFT:36%; border:0" >
+		<img src="/img/logo.png" style="position:absolute; TOP:5%; LEFT:36%; border:0" >
 		
 		<form action="/putuser.php" method="post">
 			<div class="login_panel">
@@ -87,9 +89,9 @@
 				    <div class="col">
 				    	<input type="tel" class="form-control" placeholder="Numar telefon" name="tel" required="">
 				    </div>
+				<button type="submit" class="btn btn-primary create_acc">Create account</button>
 				</div>
 				
-				<button type="submit" class="btn btn-primary login_button">Create account</button>
 			</div>
 		</form>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

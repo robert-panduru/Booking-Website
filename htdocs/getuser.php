@@ -94,84 +94,99 @@ if (!isset($name) || trim($name) === '') {
 </html>";
 }
 else {
-	echo "<!DOCTYPE html>
-	<head>
-		<!-- Required meta tags -->
-    	<meta charset=\"utf-\">
-    	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+	echo "
+    <!DOCTYPE html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset=\"utf-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=yes\">
 
-    	<!-- Bootstrap CSS -->
-    	<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+        <!-- Bootstrap CSS -->
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-    	<style type=\"text/css\">
-			/*// Small devices (landscape phones, 576px and up)*/
-			@media (min-width: 576px) { ... }
-			/*// Medium devices (tablets, 768px and up)*/
-			@media (min-width: 768px) { ... }
-			/*// Large devices (desktops, 992px and up)*/
-			@media (min-width: 992px) { ... }
-			/*// Extra large devices (large desktops, 1200px and up)*/
-			@media (min-width: 1200px) { ... }
-    		/*// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`*/
-			@include media-breakpoint-up(sm) { ... }
-			@include media-breakpoint-up(md) { ... }
-			@include media-breakpoint-up(lg) { ... }
-			@include media-breakpoint-up(xl) { ... }
-			/*// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint*/
-			.custom-class {
-			  display: none;
-			}
-			@include media-breakpoint-up(sm) {
-			  .custom-class {
-			    display: block;
-			  }
-			}
-			.login_panel {
-				width: 40%;
-				position: absolute;
-				left: 30%;
-				top: 50%;
-			}
-			.login_button {
-				margin-left: 45%;
-				margin-width: 10%;
-			}
+        <style type=\"text/css\">
+            /*// Small devices (landscape phones, 576px and up)*/
+            @media (min-width: 576px) { ... }
+            /*// Medium devices (tablets, 768px and up)*/
+            @media (min-width: 768px) { ... }
+            /*// Large devices (desktops, 992px and up)*/
+            @media (min-width: 992px) { ... }
+            /*// Extra large devices (large desktops, 1200px and up)*/
+            @media (min-width: 1200px) { ... }
+            /*// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`*/
+            @include media-breakpoint-up(sm) { ... }
+            @include media-breakpoint-up(md) { ... }
+            @include media-breakpoint-up(lg) { ... }
+            @include media-breakpoint-up(xl) { ... }
+            /*// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint*/
+            .custom-class {
+              display: none;
+            }
+            @include media-breakpoint-up(sm) {
+              .custom-class {
+                display: block;
+              }
 
-			td {
-				z-index: 100;
-				color: red;
-			}
+            .info_panel {
+                position: absolute;
+                width: 40%;
+                left: 10%;
+                top: 5%;
+            }
 
-			th {
-				z-index: 100;
-				color: red;
-			}
-    	</style>
-	</head>
-	<body background=\"http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg\">
-		<img src=\"/img/logo.png\" style=\"position:absolute; TOP:20%; LEFT:36%; border:0\" >";
-    echo "<table>";
-    echo "<tr><th>Username</th></tr>";
-    echo "<td>" . $name . "</td></tr>";
-    echo "<tr><th>Password</th></tr>";
-    echo "<td>" . $pass . "</td></tr>";
-    echo "<tr><th>Nume</th></tr>";
-    echo "<td>" . $nume . "</td></tr>";
-    echo "<tr><th>Prenume</th></tr>";
-    echo "<td>" . $prenume . "</td></tr>";
-    echo "<tr><th>Email</th></tr>";
-    echo "<td>" . $email . "</td></tr>";
-    echo "<tr><th>Numar telefon</th></tr>";
-    echo "<td>" . $nr_telefon . "</td></tr>";
-    echo "<tr><th>Scor</th></tr>";
-    echo "<td>" . $scor . "</td></tr>";
+        </style>
+        </div>
+    </head>
+    <body background=\"http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg\">
 
-    echo "</table>";
-    echo "Logged in succesfully";
-    echo "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-	<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-	<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
-	</body>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+
+
+    <div class=\"jumbotron\" style=\"position: absolute; width: 40%; height: 85%; left: 7%; top:8%;\">
+      <h1 class=\"display-3\">Profile</h1>
+      <p class=\"lead\">The following information is publicly displayed for all potential clients and
+      it will be used as primary mean of contact for the users.</p>
+      <hr class=\"my-4\">
+        <ul class=\"list-group list-group-flush\">
+                <li class=\"list-group-item\" style=\"margin-top:10px;\">Company Name: $nume</li>
+                <li class=\"list-group-item\" style=\"margin-top:10px;\">Adress: $prenume</li>
+                <li class=\"list-group-item\" style=\"margin-top:10px;\">Phone no: $nr_telefon</li>
+                <li class=\"list-group-item\" style=\"margin-top:10px;\">Email: $email</li>
+                <li class=\"list-group-item\" style=\"margin-top:10px;\">Score: $scor</li>
+            <!-- </div> -->
+        </ul>
+    <a href=\"#todo\" class=\"btn btn-primary\" role=\"button\"style=\"margin-top:25px; height:30px; margin-left:85%; width: 15%\" aria-pressed=\"true\">Edit</a>
+    </div>
+
+    <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:8%; left:60%;\">
+        <!-- <img src=\"...\" class=\"card-img-top\" alt=\"...\"> -->
+        <div class=\"card-body\">
+            <h5 class=\"card-title\">Current offers</h5>
+            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+        </div>
+    </div>
+    <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:38%; left:60%\">
+        <!-- <img src=\"...\" class=\"card-img-top\" alt=\"...\"> -->
+        <div class=\"card-body\">
+            <h5 class=\"card-title\">Active contracts</h5>
+            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+        </div>
+    </div>
+    <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:68%; left:60%\">
+        <!-- <img src=\"/img/history.png\" class=\"card-img-top\" alt=\"...\"> -->
+        <div class=\"card-body\">
+            <h5 class=\"card-title\">History</h5>
+            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+        </div>
+    </div>
+
+
+    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+    </body>
 </html>";
 }
 
