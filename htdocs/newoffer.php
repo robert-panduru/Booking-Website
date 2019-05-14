@@ -58,57 +58,33 @@ echo "<!DOCTYPE html>
 <body background=\"http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg\">
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 
-        <form action=\"addoffer.php\" method=\"post\">
-            <div class=\"login_panel\" style=\"position:absolute; top:20%\">
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Username</label> -->
-                    <div class=\"col\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"Nume anunt\" name=\"title\" required=\">
-                    </div>
-                </div>
-
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
-                    <div class=\"col\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"Locatie\" name=\"adress\" required=\">
-                    </div>
-                </div>
-
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
-                    <div class=\"col\">
-                        <input type=\"number\" class=\"form-control\" placeholder=\"Pret\" name=\"price\" required=\">
-                    </div>
-                </div>
-
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
-                    <div class=\"col\">
-                        <input type=\"date\" class=\"form-control\" placeholder=\"Data inceput\" name=\"start_date\" required=\">
-                    </div>
-                </div>
-
-
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
-                    <div class=\"col\">
-                        <input type=\"date\" class=\"form-control\" placeholder=\"Data final\" name=\"end_date\" required=\">
-                    </div>
-                </div>
-
-                <div class=\"form-group\">
-                    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
-                    <div class=\"col\">
-                        <input type=\"hidden\" class=\"form-control\" name=\"idOfertant\" value=\"" . $id . "\">
-                    </div>
-                </div>
-
-                <button type=\"submit\" class=\"btn btn-primary\">Add offer</button>
-
+        <form action=\"addoffer.php\" method=\"post\" style=\"position:absolute; TOP:20%; LEFT:25%; WIDTH:50%\">
+ 
+            <div class=\"form-group\">
+                <input type=\"text\" class=\"form-control\" name=\"title\" placeholder=\"Nume anunt\">
             </div>
+            <div class=\"form-group\">
+                <input type=\"text\" class=\"form-control\" name=\"adress\" placeholder=\"Locatie\">
+            </div>
+            <div class=\"form-group\">
+                <input type=\"number\" class=\"form-control\" name=\"price\" placeholder=\"Pret\">
+            </div>
+            <div class=\"form-group\">
+                <input type=\"date\" class=\"form-control\" name=\"start_date\" placeholder=\"Data inceput\">
+            </div>
+            <div class=\"form-group\">
+                <input type=\"date\" class=\"form-control\" name=\"end_date\" placeholder=\"Data final\">
+            </div>
+            <div class=\"form-group\">
+                <input type=\"text\" class=\"form-control\" name=\"adress\" placeholder=\"Locatie\">
+            </div>
+            <div class=\"form-group\">
+                <input type=\"hidden\" class=\"form-control\" name=\"idOfertant\" value=\"" . $id . "\">
+            </div>
+          
+            <button type=\"submit\" class=\"btn btn-primary\">Create new offer</button>
+        
         </form>
-  
-
 
     <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
