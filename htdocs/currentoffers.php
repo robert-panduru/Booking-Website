@@ -58,8 +58,10 @@ echo "<!DOCTYPE html>
 
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 ";
-echo "<a href=\"newoffer.php?idOfertant=" . $id . "\" class=\"btn btn-primary\" style=\"position:absolute; TOP:10%; LEFT:10%;\">Add offer</a>";
+
 if ($result->num_rows > 0) {
+
+    echo "<a href=\"newoffer.php?idOfertant=" . $id . "\" class=\"btn btn-primary\" style=\"position:absolute; TOP:10%; LEFT:10%;\">Add offer</a>";
     echo "<table class=\"table table-dark\" style=\"position:absolute; TOP:20%; LEFT:10%; WIDTH:80%\">
           <thead>
             <tr>
@@ -96,6 +98,11 @@ if ($result->num_rows > 0) {
     }
     echo "</tbody>
         </table>";
+} else {
+  echo "
+      <div class=\"alert alert-danger\" role=\"alert\"  style=\"position:absolute; TOP:40%; LEFT:33%; WIDTH:34%;\">
+      There are no current active offers. Add an offer <a href=\"newoffer.php?idOfertant=" . $id . "\">here</a> to see it below.
+      </div>";
 }
 
 echo "    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
