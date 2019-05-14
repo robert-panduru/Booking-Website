@@ -162,28 +162,28 @@ else {
         <!-- <img src=\"...\" class=\"card-img-top\" alt=\"...\"> -->
         <div class=\"card-body\">
             <h5 class=\"card-title\">Current offers</h5>
-            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class=\"card-text\">Inspect all current offers available for rent. You can also add a new offer here.</p>
             <a href=\"currentoffers.php?idOfertant=";
 
             echo $id;
 
-            echo "\" class=\"btn btn-primary\" >Go somewhere</a>
+            echo "\" class=\"btn btn-primary\" >View offers</a>
         </div>
     </div>
     <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:38%; left:60%\">
         <!-- <img src=\"...\" class=\"card-img-top\" alt=\"...\"> -->
         <div class=\"card-body\">
             <h5 class=\"card-title\">Active contracts</h5>
-            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            <p class=\"card-text\">See data of all curently rented equipments/fields and public information of buyers.</p>
+            <a href=\"#\" class=\"btn btn-primary\">View active contracts</a>
         </div>
     </div>
     <div class=\"card\" style=\"position: absolute; width:30%; height:25%; top:68%; left:60%\">
         <!-- <img src=\"/img/history.png\" class=\"card-img-top\" alt=\"...\"> -->
         <div class=\"card-body\">
             <h5 class=\"card-title\">History</h5>
-            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            <p class=\"card-text\">See all your past completed renting contracts and an estimate of your income.</p>
+            <a href=\"#\" class=\"btn btn-primary\">View history</a>
         </div>
     </div>
 
