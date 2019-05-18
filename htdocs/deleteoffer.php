@@ -3,7 +3,15 @@ $con = mysqli_connect('localhost','barosan','barosan','my_db');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
-$id = $_GET['idOfertant'];
+
+$id = $_POST['idOfertant'];
+$id_anunt = $_POST['idAnunt'];
+
+mysqli_select_db($con, "anunt");
+$sql = "DELETE from anunt where ID_anunt=" . $id_anunt;
+
+$resultDelete = mysqli_query($con, $sql);
+
 mysqli_select_db($con, "anunt");
 $sql = "SELECT ID_anunt, Titlu, Adresa, Pret, Inceput, Final, ID_ofertant
 FROM anunt
@@ -50,6 +58,12 @@ echo "<!DOCTYPE html>
 <body background=\"http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg\">
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 ";
+
+if ($resultDelete === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record";
+}
 if ($result->num_rows > 0) {
     echo "<a href=\"newoffer.php?idOfertant=" . $id . "\" class=\"btn btn-primary\" style=\"position:absolute; TOP:10%; LEFT:10%;\">Add offer</a>";
     echo "<table class=\"table table-dark\" style=\"position:absolute; TOP:20%; LEFT:10%; WIDTH:80%\">
@@ -76,11 +90,11 @@ if ($result->num_rows > 0) {
               <td>" . $row["Inceput"] . "</td>
               <td>" . $row["Final"] . "</td>
               <td>
-              	<form action=\"deleteoffer.php\" method=\"post\">
-              		<input type=\"number\" name=\"idOfertant\" value=\"" . intval($id) . "\" hidden>
-              		<input type=\"number\" name=\"idAnunt\" value=\"" . $row['ID_anunt'] . "\" hidden>
-              		<input type=\"submit\" value=\"X\">
-              	</form>
+                <form action=\"deleteoffer.php\" method=\"post\">
+                  <input type=\"number\" name=\"idOfertant\" value=\"" . intval($id) . "\" hidden>
+                  <input type=\"number\" name=\"idAnunt\" value=\"" . $row['ID_anunt'] . "\" hidden>
+                  <input type=\"submit\" value=\"X\">
+                </form>
               </td>
               </tr>";
         $register_number++;
