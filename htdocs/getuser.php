@@ -168,7 +168,7 @@ else {
         <!-- <img src=\"/img/history.png\" class=\"card-img-top\" alt=\"...\"> -->
         <div class=\"card-body\">
             <h5 class=\"card-title\">History</h5>
-            <p class=\"card-text\">See all your past completed renting contracts and an estimate of your income.</p>
+            <p class=\"card-text\">See all your past completed renting contracts and any reviews left by your customers.</p>
             <a href=\"history.php?id=" . $id . "\" class=\"btn btn-primary\">View history</a>
         </div>
     </div>
