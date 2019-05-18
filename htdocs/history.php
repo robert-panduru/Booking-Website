@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
 
 }
 else {
-	echo "Nu a fost listat nimic";
+	echo "Nu e nimic de listat";
 }
 
 mysqli_close($con);
