@@ -92,7 +92,12 @@ if ($result->num_rows > 0) {
               <td>" . $row["Pret"] . "</td>
               <td>" . $row["Inceput"] . "</td>
               <td>" . $row["Final"] . "</td>
-              <td><button onclick=\"deleteoffer.php?idOfertant='$id'&titlu='$row["Titlu"]'\">X</button></td>
+              <td><form action=\"deleteoffer.php\" method=\"post\">
+                    <input type=\"number\" name=\"idOfertant\" value=\"" . intval($id) . "\" hidden>
+                    <input type=\"number\" name=\"idAnunt\" value=\"" . $row['ID_anunt'] . "\" hidden>
+                    <input type=\"submit\" value=\"X\">
+                </form>
+                </td>
               </tr>";
         $register_number++;
 
