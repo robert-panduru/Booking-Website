@@ -60,18 +60,20 @@ if (!isset($name) || trim($name) === '') {
     	</style>
 	</head>
 	<body background=\"http://bramptonist.com/wp-content/uploads/2017/03/sports-field.jpg\">
-		<img src=\"/img/logo.png\" style=\"position:absolute; TOP:20%; LEFT:36%; border:0\" >
-		<div id = \"login\">Invalid username/password</div>
+		<img src=\"/img/logo.png\" style=\"position:absolute; TOP:20%; LEFT:35%; WIDTH:30%; border:0\">
+
+		<div class=\"alert alert-danger\" role=\"alert\"  style=\"position:absolute; TOP:10%; LEFT:33%; WIDTH:34%;\">
+            Invalid creditals.
+        </div>
+
 		<form action=\"/getuser.php\">
 			<div class=\"login_panel\">
 				<div class=\"form-group\">
-		    		<!-- <label class=\"col-sm-1 col-form-label\">Username</label> -->
 		   			<div class=\"col\">
 		     			<input type=\"text\" class=\"form-control\" placeholder=\"Enter Username\" name=\"uname\" required=\"\">
 		    		</div>
 		  		</div>
 				<div class=\"form-group\">
-				    <!-- <label class=\"col-sm-1 col-form-label\">Password</label> -->
 				    <div class=\"col\">
 				    	<input type=\"password\" class=\"form-control\" placeholder=\"Password\" name=\"psw\" required=\"\">
 				    </div>
@@ -80,7 +82,7 @@ if (!isset($name) || trim($name) === '') {
 				<button type=\"submit\" class=\"btn btn-primary login_button\">Login</button>
 			</div>
 		</form>
-		<div style=\"position:absolute; TOP:70%; LEFT:45%; border:0; color:red\"><a href=\"signup.html\">Sign up</a></div>
+		
 	<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 	<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 	<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
@@ -167,7 +169,7 @@ else {
         <div class=\"card-body\">
             <h5 class=\"card-title\">History</h5>
             <p class=\"card-text\">See all your past completed renting contracts and an estimate of your income.</p>
-            <a href=\"history.php?id=" . $id ."\" class=\"btn btn-primary\">View history</a>
+            <a href=\"history.php?id=" . $id . "\" class=\"btn btn-primary\">View history</a>
         </div>
     </div>
     <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
