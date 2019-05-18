@@ -84,7 +84,9 @@ if ($result->num_rows > 0) {
 
 }
 else {
-	echo "Nu a fost listat nimic";
+	echo "<div class=\"alert alert-danger\" role=\"alert\"  style=\"position:absolute; TOP:40%; LEFT:33%; WIDTH:34%;\">
+      There are no reviews to be shown.
+      </div>";
 }
 
 mysqli_close($con);
